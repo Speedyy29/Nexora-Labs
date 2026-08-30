@@ -2064,9 +2064,7 @@ section + section {
 .techstack-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 1px;
   margin-top: 36px;
-  background: var(--hairline);
 }
 
 .tech-card {
@@ -2074,6 +2072,7 @@ section + section {
   text-align: center;
   background: var(--canvas);
   transition: background-color 0.3s;
+  border: 1px solid var(--hairline);
 }
 
 .tech-card:hover {

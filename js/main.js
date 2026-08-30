@@ -21,7 +21,7 @@ function sanitizeInput(str) {
 var AGENCY = {
   name: 'Nexora Labs',
   tagline: 'AI + Web + Automation. Turning business problems into digital systems.',
-  email: 'us641787@gmail.com',
+  email: 'usrivastava55@gmail.com',
   whatsapp: '+919304008740',
   linkedin: 'https://www.linkedin.com/in/utkarshh29/',
   github: 'https://github.com/utkarshh',
