@@ -1,7 +1,6 @@
 (function () {
     var hero = document.getElementById('hero');
     if (!hero) return;
-
     var revealLayer = document.querySelector('.hero-reveal-layer');
     if (!revealLayer) return;
 

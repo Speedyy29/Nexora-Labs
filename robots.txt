@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nexora-labs-pi.vercel.app/sitemap.xml

@@ -3,10 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nexora Labs — AI Product Studio · Luxury Websites, SaaS & AI Solutions</title>
-  <meta name="description" content="Nexora Labs builds luxury websites, SaaS products, AI applications, and automation systems. Premium AI product studio serving businesses worldwide." />
-  <meta name="theme-color" content="#050505" />
-  <!-- ==================== ANALYTICS ==================== -->
+  <title>Nexora Labs — AI + Web + Automation Digital Solutions Studio</title>
+  <meta name="description" content="Nexora Labs is an AI-powered digital solutions studio. We build premium websites, custom AI applications, and automated business systems designed around how your business works." />
+  <meta name="theme-color" content="#000000" />
+  
+  <link rel="canonical" href="https://nexora-labs-pi.vercel.app/" />
+  <link rel="icon" type="image/png" href="nexoralogo.png">
+  
+  <meta property="og:title" content="Nexora Labs — AI + Web + Automation Digital Solutions Studio" />
+  <meta property="og:description" content="We turn business problems into digital systems that attract customers, convert opportunities, and automate workflows." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nexora-labs-pi.vercel.app/" />
+  <meta property="og:image" content="https://nexora-labs-pi.vercel.app/screenshot-full.png" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nexora Labs — AI + Web + Automation Digital Solutions Studio" />
+  <meta name="twitter:description" content="We turn business problems into digital systems that attract customers, convert opportunities, and automate workflows." />
+  <meta name="twitter:image" content="https://nexora-labs-pi.vercel.app/screenshot-full.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Nexora Labs",
+    "url": "https://nexora-labs-pi.vercel.app/",
+    "logo": "https://nexora-labs-pi.vercel.app/nexoralogo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+919304008740",
+      "contactType": "customer service",
+      "email": "us641787@gmail.com"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/utkarshh29/",
+      "https://github.com/utkarshh"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Nexora Labs",
+    "url": "https://nexora-labs-pi.vercel.app/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "AI & Web Development",
+    "provider": {
+      "@type": "Organization",
+      "name": "Nexora Labs"
+    },
+    "description": "We turn business problems into digital systems: attract customers, convert opportunities, automate workflows, and provide dashboard analytics."
+  }
+  </script>
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -21,434 +75,682 @@
       y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
     })(window, document, "clarity", "script", "XXXXXXXXXX");
   </script>
-  <!-- ==================== FONTS + ICONS ==================== -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.31.0/dist/tabler-icons.min.css" />
-  <!-- ==================== STYLES ==================== -->
-  <link rel="stylesheet" href="css/styles.css?v=5" />
+  
+  <link rel="stylesheet" href="css/styles.css?v=7" />
 </head>
 <body>
-  <!-- ==================== GLOBAL THREE.JS CANVAS ==================== -->
-  <canvas id="globalCanvas"></canvas>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- ==================== NAVIGATION ==================== -->
-  <nav id="nav">
+  <nav id="nav" aria-label="Main navigation">
     <div class="nav-inner">
-      <a href="#" class="nav-logo" id="navLogo"><span class="logo-dot"></span>Nexora Labs</a>
-      <div class="nav-pill" id="navPill">
-        <a href="#expertise">Expertise</a>
-        <a href="#work">Portfolio</a>
-        <a href="#philosophy">Philosophy</a>
-        <a href="#impact">Impact</a>
-        <a href="#contact">Contact</a>
+      <a href="#" class="nav-logo" id="navLogo"><img src="nexoralogo.png" alt="Nexora Labs" class="nav-logo-img" />Nexora Labs</a>
+      <div class="nav-pill" id="navPill" role="menubar">
+        <a href="#solutions" role="menuitem">Solutions</a>
+        <a href="#work" role="menuitem">Work</a>
+        <a href="#process" role="menuitem">Process</a>
+        <a href="#founder" role="menuitem">About</a>
+        <a href="#contact" role="menuitem">Contact</a>
       </div>
-      <a href="#contact" class="nav-cta-btn" data-track="cta_click" id="navCta">Book Consultation</a>
-      <button id="hamburger" aria-label="Menu"><i class="ti ti-menu-2"></i></button>
+      <a href="#audit" class="nav-cta-btn" data-track="cta_click" id="navCta">Free Business Audit</a>
+      <button id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><i class="ti ti-menu-2" aria-hidden="true"></i></button>
     </div>
   </nav>
 
-  <!-- Mobile menu overlay -->
-  <div id="mobileMenu">
-    <button id="mobileClose" aria-label="Close"><i class="ti ti-x"></i></button>
-    <a href="#expertise" class="mm-link">Expertise</a>
-    <a href="#work" class="mm-link">Portfolio</a>
-    <a href="#philosophy" class="mm-link">Philosophy</a>
-    <a href="#impact" class="mm-link">Impact</a>
+  <div id="mobileMenu" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
+    <button id="mobileClose" aria-label="Close navigation menu"><i class="ti ti-x" aria-hidden="true"></i></button>
+    <a href="#solutions" class="mm-link">Solutions</a>
+    <a href="#work" class="mm-link">Work</a>
+    <a href="#process" class="mm-link">Process</a>
+    <a href="#founder" class="mm-link">About</a>
     <a href="#contact" class="mm-link">Contact</a>
-    <a href="#contact" class="btn btn-primary mm-link" data-track="cta_click">Book Consultation</a>
+    <a href="#audit" class="btn btn-primary mm-link" data-track="cta_click">Free Business Audit</a>
   </div>
 
-  <!-- ==================== HERO ==================== -->
-  <section id="hero">
-    <div class="hero-base-image" aria-hidden="true"></div>
-    <div class="hero-reveal-layer" aria-hidden="true"></div>
-    <div class="hero-heading">
-      <h1 class="hero-h1" aria-label="Luxury Websites, SaaS Products AI Solutions Built For Growth">
-        <span class="h1-line h1-line-1"><span class="h1-ital">Luxury</span> Websites</span>
-        <span class="h1-line h1-line-2">SaaS <span class="h1-ital">AI</span> Solutions <span class="h1-gradient">Built For Growth</span></span>
-      </h1>
-    </div>
-    <div class="hero-bottom-left">
-      <p class="hero-bl-text">
-        We design, develop, and launch premium websites, SaaS platforms,
-        AI applications, and automation systems for ambitious businesses worldwide.
-      </p>
-    </div>
-    <div class="hero-bottom-right">
-      <p class="hero-br-text">
-        From landing pages to full-scale AI platforms, Nexora Labs transforms
-        ideas into production-ready digital products.
-      </p>
-      <a href="#contact" class="hero-br-btn" data-track="cta_click" id="heroCta">
-        <span>Get Free Website Audit</span>
-        <i class="ti ti-arrow-right"></i>
-      </a>
-    </div>
-  </section>
-
-  <!-- ==================== MARQUEE ==================== -->
-  <section id="marquee">
-    <div class="marquee-track">
-      <span>AI Products <em>&#9670;</em></span>
-      <span>SaaS Platforms <em>&#9670;</em></span>
-      <span>Web Applications <em>&#9670;</em></span>
-      <span>AI Automation <em>&#9670;</em></span>
-      <span>Generative AI <em>&#9670;</em></span>
-      <span>Productivity Tools <em>&#9670;</em></span>
-      <span>AI Products <em>&#9670;</em></span>
-      <span>SaaS Platforms <em>&#9670;</em></span>
-      <span>Web Applications <em>&#9670;</em></span>
-      <span>AI Automation <em>&#9670;</em></span>
-      <span>Generative AI <em>&#9670;</em></span>
-      <span>Productivity Tools <em>&#9670;</em></span>
-    </div>
-  </section>
-
-  <!-- ==================== OUR EXPERTISE ==================== -->
-  <section id="expertise">
-    <div class="container">
-      <div class="reveal" style="text-align:center;">
-        <div class="section-label" style="justify-content:center;">Our Expertise</div>
-        <h2 class="section-title">What we <span class="gradient">specialize in</span></h2>
-        <p class="section-sub" style="margin:0 auto;">We combine design, engineering, and AI to build products that create measurable business outcomes.</p>
-      </div>
-      <div class="expertise-grid" id="expertiseGrid"></div>
-    </div>
-  </section>
-
-  <!-- ==================== OUR PHILOSOPHY ==================== -->
-  <section id="philosophy">
-    <div class="container">
-      <div class="reveal" style="text-align:center;">
-        <div class="section-label" style="justify-content:center;">Philosophy</div>
-        <h2 class="section-title">Our <span class="gradient">Philosophy</span></h2>
-      </div>
-      <div class="philosophy-grid" id="philosophyGrid"></div>
-    </div>
-  </section>
-
-  <!-- ==================== WHAT WE BUILD (Portfolio) ==================== -->
-  <section id="work">
-    <div class="container">
-      <div class="reveal">
-        <div class="section-label">What we build</div>
-        <h2 class="section-title">Featured <span class="gradient">Projects</span></h2>
-        <p class="section-sub">Real products, live and running. AI platforms, SaaS apps, and web solutions.</p>
-      </div>
-      <div class="portfolio-grid" id="portfolioScene"></div>
-      <!-- Upcoming Projects -->
-      <div class="upcoming-section reveal">
-        <div class="upcoming-label">Upcoming Projects</div>
-        <div class="upcoming-grid" id="upcomingGrid"></div>
-        <p class="upcoming-note">More projects available upon request.</p>
-        <a href="#contact" class="btn btn-primary" data-track="cta_click">Contact Us For Case Studies <i class="ti ti-arrow-right"></i></a>
-      </div>
-      <div class="portfolio-more reveal">
-        <a href="#" class="btn btn-secondary" id="linkedinLink" target="_blank">More on LinkedIn <i class="ti ti-arrow-right"></i></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== BUSINESS IMPACT ==================== -->
-  <section id="impact">
-    <div class="container">
-      <div class="reveal" style="text-align:center;">
-        <div class="section-label" style="justify-content:center;">Business Impact</div>
-        <h2 class="section-title">How We Help Businesses <span class="gradient">Grow</span></h2>
-        <p class="section-sub" style="margin:0 auto;">Technology is only useful when it creates measurable business outcomes.</p>
-      </div>
-      <div class="impact-grid" id="impactGrid"></div>
-      <div class="impact-quote reveal">
-        <p>&ldquo;Businesses don&rsquo;t need more software. They need better outcomes.&rdquo;</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== CTA BLOCK ==================== -->
-  <div class="cta-block reveal">
-    <div class="container">
-      <div class="cta-block-inner">
-        <h2>Ready To Build Something <span class="gradient">Extraordinary?</span></h2>
-        <a href="#contact" class="btn btn-primary" data-track="cta_click">Book Strategy Call <i class="ti ti-arrow-right"></i></a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ==================== WHY US ==================== -->
-  <section id="whyus">
-    <div class="container">
-      <div class="reveal">
-        <div class="section-label">The difference</div>
-        <h2 class="section-title">Why clients <span class="gradient">work with us</span></h2>
-      </div>
-      <div class="whyus-grid" id="whyusGrid"></div>
-    </div>
-  </section>
-
-  <!-- ==================== PROCESS ==================== -->
-  <section id="process">
-    <div class="container">
-      <div class="reveal" style="text-align:center;">
-        <div class="section-label" style="justify-content:center;">Our process</div>
-        <h2 class="section-title">From idea to launch in <span class="gradient">5 days</span></h2>
-        <p class="section-sub" style="margin:0 auto;">A streamlined AI-accelerated workflow that ships premium products, fast.</p>
-      </div>
-      <div class="process-timeline reveal" id="processTimeline"></div>
-    </div>
-  </section>
-
-  <!-- ==================== CLIENT FEEDBACK ==================== -->
-  <section id="feedback">
-    <div class="container">
-      <div class="reveal" style="text-align:center;">
-        <div class="section-label" style="justify-content:center;">Client Feedback</div>
-        <h2 class="section-title">What our clients <span class="gradient">say</span></h2>
-      </div>
-      <div class="feedback-grid" id="feedbackGrid"></div>
-    </div>
-  </section>
-
-  <!-- ==================== ESTIMATOR ==================== -->
-  <section id="estimate">
-    <div class="container">
-      <div class="reveal" style="text-align:center;">
-        <div class="section-label" style="justify-content:center;">Instant estimate</div>
-        <h2 class="section-title">Get a project <span class="gradient">proposal</span></h2>
-        <p class="section-sub" style="margin:0 auto;">Tell us what you need. Get a customized proposal outline in seconds.</p>
-      </div>
-      <div class="estimator reveal">
-        <div class="est-progress">
-          <div class="est-step-indicator active" data-step="1">1</div>
-          <div class="est-progress-line"><div class="fill" style="width:0%"></div></div>
-          <div class="est-step-indicator" data-step="2">2</div>
-          <div class="est-progress-line"><div class="fill" style="width:0%"></div></div>
-          <div class="est-step-indicator" data-step="3">3</div>
+  <main id="main-content">
+    <!-- HERO -->
+    <section id="hero" aria-label="Introduction">
+      <div class="hero-base-image" aria-hidden="true"></div>
+      <div class="hero-center-content">
+        <div class="hero-heading">
+          <h1 class="hero-h1">
+            <span class="h1-line h1-line-1">Turn Your Digital Presence</span>
+            <span class="h1-line h1-line-2">Into a Growth Engine</span>
+          </h1>
+          <p class="hero-subheading">
+            Nexora Labs builds premium websites, AI applications and automated business systems that help companies attract customers, convert enquiries and operate more efficiently.
+          </p>
+          <div class="hero-ctas">
+            <a href="#audit" class="btn btn-primary" data-track="hero_primary_click">
+              <span>Get a Free Business Audit</span>
+              <i class="ti ti-arrow-right" aria-hidden="true"></i>
+            </a>
+            <a href="#work" class="btn btn-secondary" data-track="hero_secondary_click">
+              <span>Explore Our Work</span>
+            </a>
+          </div>
+          <p class="hero-trust-statement">
+            Founder-led &middot; AI-powered &middot; Built for real business outcomes
+          </p>
         </div>
+      </div>
+    </section>
 
-        <div class="est-step active" data-step="1">
-          <h3>About your business</h3>
-          <p>Help us understand what you do.</p>
-          <div class="field">
-            <label>Business type</label>
-            <select id="bizType">
-              <option value="">Select...</option>
-              <option>Restaurant</option>
-              <option>Salon &amp; Spa</option>
-              <option>Clinic</option>
-              <option>Coaching</option>
-              <option>Real Estate</option>
-              <option>E-commerce</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="field">
-            <label>Your location</label>
-            <input type="text" id="bizLocation" placeholder="e.g. Mumbai, India or London, UK" />
-          </div>
-          <div class="field">
-            <label>What's the goal?</label>
-            <div class="radio-group" id="bizGoal">
-              <label><input type="radio" name="goal" value="Get more calls" /><span>Get more calls</span></label>
-              <label><input type="radio" name="goal" value="Sell online" /><span>Sell online</span></label>
-              <label><input type="radio" name="goal" value="Look professional" /><span>Look professional</span></label>
-              <label><input type="radio" name="goal" value="All of the above" /><span>All of the above</span></label>
+    <!-- M STRIPE DIVIDER -->
+    <div class="m-stripe-divider" aria-hidden="true"></div>
+
+    <!-- MARQUEE -->
+    <section id="marquee" aria-label="Services overview">
+      <div class="marquee-track" aria-hidden="true">
+        <span>AI Solutions <em>&#9670;</em></span>
+        <span>Automated Workflows <em>&#9670;</em></span>
+        <span>Premium Websites <em>&#9670;</em></span>
+        <span>AI Assistants <em>&#9670;</em></span>
+        <span>Conversion Architecture <em>&#9670;</em></span>
+        <span>Business Analytics <em>&#9670;</em></span>
+        <span>AI Solutions <em>&#9670;</em></span>
+        <span>Automated Workflows <em>&#9670;</em></span>
+        <span>Premium Websites <em>&#9670;</em></span>
+        <span>AI Assistants <em>&#9670;</em></span>
+        <span>Conversion Architecture <em>&#9670;</em></span>
+        <span>Business Analytics <em>&#9670;</em></span>
+      </div>
+    </section>
+
+    <!-- THE PROBLEM -->
+    <section id="problem">
+      <div class="container reveal">
+        <div class="reveal" style="text-align:center;">
+          <div class="section-label" style="justify-content:center;">The Bottleneck</div>
+          <h2 class="section-title">YOUR BUSINESS DOESN'T NEED ANOTHER WEBSITE.</h2>
+          <p class="section-sub" style="margin:0 auto 56px;">It needs a better way to turn attention into customers.</p>
+        </div>
+        
+        <div class="problem-grid">
+          <div class="problem-card reveal reveal-delay-1">
+            <div class="problem-num">01</div>
+            <div class="problem-card-body">
+              <h3>Traffic Gaps</h3>
+              <p>Visitors find you but don't enquire.</p>
             </div>
           </div>
-          <div class="est-nav">
-            <div></div>
-            <button class="btn btn-primary" onclick="estNext(2)" data-track="estimator_started">Next <i class="ti ti-arrow-right"></i></button>
-          </div>
-        </div>
-
-        <div class="est-step" data-step="2">
-          <h3>What you need</h3>
-          <p>Customise your website package.</p>
-          <div class="field">
-            <label>Number of pages</label>
-            <div class="slider-wrap">
-              <input type="range" id="pageCount" min="1" max="10" value="3" oninput="document.getElementById('pageVal').textContent=this.value" />
-              <div class="slider-val" id="pageVal">3</div>
+          <div class="problem-card reveal reveal-delay-2">
+            <div class="problem-num">02</div>
+            <div class="problem-card-body">
+              <h3>Friction Points</h3>
+              <p>Customers can't easily book, call or message you.</p>
             </div>
           </div>
-          <div class="field">
-            <label>Features (select all that apply)</label>
-            <div class="features-grid" id="featuresGrid">
-              <div class="feat-card" data-feat="Contact form"><i class="ti ti-mail"></i>Contact form</div>
-              <div class="feat-card" data-feat="WhatsApp button"><i class="ti ti-brand-whatsapp"></i>WhatsApp</div>
-              <div class="feat-card" data-feat="Photo gallery"><i class="ti ti-photo"></i>Gallery</div>
-              <div class="feat-card" data-feat="Blog"><i class="ti ti-pencil"></i>Blog</div>
-              <div class="feat-card" data-feat="Booking system"><i class="ti ti-calendar"></i>Booking</div>
-              <div class="feat-card" data-feat="Payment gateway"><i class="ti ti-credit-card"></i>Payment</div>
-              <div class="feat-card" data-feat="Google Maps"><i class="ti ti-map-pin"></i>Maps</div>
-              <div class="feat-card" data-feat="SEO setup"><i class="ti ti-search"></i>SEO</div>
-              <div class="feat-card" data-feat="Social media links"><i class="ti ti-share"></i>Social</div>
-              <div class="feat-card" data-feat="Live chat"><i class="ti ti-message-circle"></i>Live chat</div>
+          <div class="problem-card reveal reveal-delay-3">
+            <div class="problem-num">03</div>
+            <div class="problem-card-body">
+              <h3>Manual Waste</h3>
+              <p>Your team spends hours on repetitive work.</p>
             </div>
           </div>
-          <div class="field">
-            <label>Timeline</label>
-            <div class="radio-group" id="timeline">
-              <label><input type="radio" name="timeline" value="ASAP" /><span>ASAP (3&ndash;4 days)</span></label>
-              <label><input type="radio" name="timeline" value="Normal" /><span>Normal (1 week)</span></label>
-              <label><input type="radio" name="timeline" value="Flexible" /><span>Flexible (2+ weeks)</span></label>
-            </div>
-          </div>
-          <div class="est-nav">
-            <button class="btn btn-secondary" onclick="estNext(1)"><i class="ti ti-arrow-left"></i> Back</button>
-            <button class="btn btn-primary" onclick="estNext(3)">Next <i class="ti ti-arrow-right"></i></button>
-          </div>
-        </div>
-
-        <div class="est-step" data-step="3">
-          <h3>Your details</h3>
-          <p>So we can send your proposal and follow up.</p>
-          <div class="field">
-            <label for="estName">Full name *</label>
-            <input type="text" id="estName" placeholder="Your name" autocomplete="name" aria-label="Full name" />
-            <div class="field-error" id="err-estName" role="alert" aria-live="polite" hidden></div>
-          </div>
-          <div class="field">
-            <label for="estWhatsapp">WhatsApp number *</label>
-            <input type="tel" id="estWhatsapp" placeholder="+91 98765 43210" autocomplete="tel" aria-label="WhatsApp number" />
-            <div class="field-error" id="err-estWhatsapp" role="alert" aria-live="polite" hidden></div>
-          </div>
-          <div class="field">
-            <label for="estEmail">Email address *</label>
-            <input type="email" id="estEmail" placeholder="you@example.com" autocomplete="email" aria-label="Email address" />
-            <div class="field-error" id="err-estEmail" role="alert" aria-live="polite" hidden></div>
-          </div>
-          <div class="field">
-            <label>Any extra notes (optional)</label>
-            <textarea id="estNotes" placeholder="Anything else we should know..."></textarea>
-          </div>
-          <div class="est-nav">
-            <button class="btn btn-secondary" onclick="estNext(2)"><i class="ti ti-arrow-left"></i> Back</button>
-            <button class="btn btn-primary" id="estSubmitBtn" data-track="lead_submitted" aria-label="Get Customized Proposal">Get Customized Proposal <i class="ti ti-arrow-right"></i></button>
-          </div>
-        </div>
-
-        <div class="est-loading" id="estLoading" aria-live="polite" aria-busy="true">
-          <div class="est-spinner"></div>
-          <p>Our AI is preparing your customized proposal...</p>
-        </div>
-
-        <div class="est-failure" id="estFailure" role="alert" aria-live="assertive" hidden>
-          <div class="est-failure-inner">
-            <div class="est-failure-title">Something went wrong</div>
-            <div class="est-failure-message" id="estFailureMsg"></div>
-            <div class="est-failure-actions">
-              <button class="btn btn-secondary" type="button" id="estRetryBtn" aria-label="Try again">Try again</button>
+          <div class="problem-card reveal reveal-delay-4">
+            <div class="problem-num">04</div>
+            <div class="problem-card-body">
+              <h3>No Clarity</h3>
+              <p>Your digital presence doesn't explain why customers should choose you.</p>
             </div>
           </div>
         </div>
+        
+        <div class="problem-reveal-box reveal">
+          <h3>Nexora finds the gaps and builds the system to fix them.</h3>
+        </div>
+      </div>
+    </section>
 
-        <div class="est-result" id="estResult">
-          <div class="est-price" id="resPrice"></div>
-          <div class="est-delivery" id="resDelivery"></div>
-          <ul class="est-included" id="resIncluded"></ul>
-          <div class="est-upsell" id="resUpsell"></div>
-          <div class="est-disclaimer" id="resDisclaimer"></div>
-          <div class="est-result-ctas">
-            <a href="#" class="btn btn-primary" id="resWhatsapp" target="_blank" data-track="whatsapp_click">Schedule Strategy Call <i class="ti ti-arrow-right"></i></a>
-            <button class="btn btn-secondary" id="resEmail">Email Me This Blueprint</button>
+    <!-- GROWTH SYSTEM -->
+    <section id="growth-system">
+      <div class="container reveal">
+        <div class="reveal" style="text-align:center;">
+          <div class="section-label" style="justify-content:center;">Growth System</div>
+          <h2 class="section-title">FROM ATTENTION TO OUTCOME</h2>
+          <p class="section-sub" style="margin: 0 auto 60px;">An integrated four-stage infrastructure built to attract, convert, automate and understand your customer interactions.</p>
+        </div>
+
+        <div class="flow-container">
+          <div class="flow-step">
+            <div class="flow-node">
+              <span class="flow-num-badge">1</span>
+              <span class="node-title">ATTRACT</span>
+            </div>
+            <ul class="flow-details">
+              <li><span>Websites</span></li>
+              <li><span>Landing pages</span></li>
+              <li><span>SEO foundations</span></li>
+              <li><span>Google Business</span></li>
+            </ul>
+          </div>
+          
+          <div class="flow-connector-line" aria-hidden="true"></div>
+
+          <div class="flow-step">
+            <div class="flow-node">
+              <span class="flow-num-badge">2</span>
+              <span class="node-title">CONVERT</span>
+            </div>
+            <ul class="flow-details">
+              <li><span>Lead capture</span></li>
+              <li><span>WhatsApp</span></li>
+              <li><span>Booking systems</span></li>
+              <li><span>Conversion UX</span></li>
+            </ul>
+          </div>
+
+          <div class="flow-connector-line" aria-hidden="true"></div>
+
+          <div class="flow-step">
+            <div class="flow-node">
+              <span class="flow-num-badge">3</span>
+              <span class="node-title">AUTOMATE</span>
+            </div>
+            <ul class="flow-details">
+              <li><span>AI assistants / Chatbots</span></li>
+              <li><span>Lead qualification</span></li>
+              <li><span>Follow-ups</span></li>
+              <li><span>API integrations</span></li>
+            </ul>
+          </div>
+
+          <div class="flow-connector-line" aria-hidden="true"></div>
+
+          <div class="flow-step">
+            <div class="flow-node">
+              <span class="flow-num-badge">4</span>
+              <span class="node-title">UNDERSTAND</span>
+            </div>
+            <ul class="flow-details">
+              <li><span>Analytics</span></li>
+              <li><span>Dashboards</span></li>
+              <li><span>Conversion tracking</span></li>
+              <li><span>Business insights</span></li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ==================== FOUNDER ==================== -->
-  <section id="founder">
-    <div class="container">
-      <div class="reveal" style="text-align:center;">
-        <div class="section-label" style="justify-content:center;">The architect</div>
-        <h2 class="section-title">Founder-Led <span class="gradient">Development</span></h2>
+    <!-- SERVICES -->
+    <section id="expertise">
+      <div class="container">
+        <div class="reveal" style="text-align:center;">
+          <div class="section-label" style="justify-content:center;">Services</div>
+          <h2 class="section-title">WHAT WE BUILD</h2>
+          <p class="section-sub" style="margin:0 auto;">Digital systems designed around the way your business actually works.</p>
+        </div>
+        <div class="expertise-grid" id="expertiseGrid"></div>
       </div>
-      <div class="founder-card-premium reveal">
-        <div class="founder-info-side">
-          <div class="founder-tagline">Utkarsh Srivastava</div>
-          <h3 class="founder-name-premium">Founder &amp; Lead Developer</h3>
-          <div class="founder-role-premium">Nexora Labs</div>
-          <p class="founder-bio-premium">Nexora Labs is an AI Product Studio focused on building premium websites, SaaS platforms, AI applications, and automation systems.</p>
-          <p class="founder-bio-premium">Every project is built directly by the founder using modern engineering workflows and AI-assisted development.</p>
-          <div class="founder-socials-premium">
-            <a href="#" class="btn-social-icon" id="founderLinkedin" target="_blank" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
-            <a href="#" class="btn-social-icon" id="founderGithub" target="_blank" aria-label="GitHub"><i class="ti ti-brand-github"></i></a>
-            <a href="#" class="btn-social-icon" id="founderEmail" aria-label="Email"><i class="ti ti-mail"></i></a>
+    </section>
+
+    <!-- BUSINESS SOLUTIONS -->
+    <section id="solutions">
+      <div class="container reveal">
+        <div class="reveal" style="text-align:center;">
+          <div class="section-label" style="justify-content:center;">Industry Fit</div>
+          <h2 class="section-title">TELL US YOUR BUSINESS. WE'LL FIND THE OPPORTUNITY.</h2>
+          <p class="section-sub" style="margin:0 auto 48px;">Different businesses have different bottlenecks. Select your sector below to see how Nexora designs systems for you.</p>
+        </div>
+
+        <div class="sol-container">
+          <div class="sol-tabs-scroll-wrapper">
+            <div class="sol-tabs" id="solTabs" role="tablist" aria-label="Business Solutions"></div>
           </div>
-          <div class="founder-timeline" id="founderTimeline"></div>
-        </div>
-        <div class="founder-features-side">
-          <h4 class="founder-features-title">Why Work With Us</h4>
-          <ul class="founder-points-premium">
-            <li><i class="ti ti-square-rounded-check"></i> <span>Founder-Led Development</span></li>
-            <li><i class="ti ti-square-rounded-check"></i> <span>Direct Communication</span></li>
-            <li><i class="ti ti-square-rounded-check"></i> <span>No Outsourcing</span></li>
-            <li><i class="ti ti-square-rounded-check"></i> <span>AI-Powered Engineering</span></li>
-            <li><i class="ti ti-square-rounded-check"></i> <span>Fast Delivery</span></li>
-          </ul>
+          <div class="sol-content-wrap" id="solContent"></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ==================== TECH STACK ==================== -->
-  <section id="techstack">
-    <div class="container">
-      <div class="reveal" style="text-align:center;">
-        <div class="section-label" style="justify-content:center;">Tech stack</div>
-        <h2 class="section-title">Technologies we <span class="gradient">build with</span></h2>
+    <!-- PORTFOLIO -->
+    <section id="work">
+      <div class="container">
+        <div class="reveal">
+          <div class="section-label">Our Work</div>
+          <h2 class="section-title">SELECTED WORK</h2>
+          <p class="section-sub">Products and systems we've designed and built. Real applications, live and running.</p>
+        </div>
+        <div class="portfolio-grid" id="portfolioScene"></div>
+        
+        <div class="upcoming-section reveal">
+          <div class="upcoming-label">Available for demonstration during consultation</div>
+          <div class="upcoming-grid" id="upcomingGrid"></div>
+          <a href="#contact" class="btn btn-primary" data-track="cta_click">Request Demo <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        <div class="portfolio-more reveal">
+          <a href="#" class="btn btn-secondary" id="linkedinLink" target="_blank" rel="noopener noreferrer">More on LinkedIn <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+        </div>
       </div>
-      <div class="techstack-grid" id="techstackGrid"></div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ==================== CONTACT ==================== -->
-  <section id="contact">
-    <div class="contact-glow"></div>
-    <div class="container reveal">
-      <div class="contact-logo-glow"><div class="dot"></div></div>
-      <div class="section-label" style="justify-content:center;">Let's talk</div>
-      <h2 class="section-title">Let's build <span class="gradient">something great</span></h2>
-      <p class="section-sub" style="margin:0 auto;">Have a project in mind? Let's talk. We reply within 24 hours.</p>
-      <div class="contact-btns">
-        <a href="#" class="btn-outline" id="emailLink"><i class="ti ti-mail"></i> Email Us</a>
-        <a href="#" class="btn-outline" id="waContact" target="_blank" data-track="whatsapp_click"><i class="ti ti-brand-whatsapp"></i> WhatsApp</a>
-        <a href="#" class="btn-outline" id="liContact" target="_blank"><i class="ti ti-brand-linkedin"></i> LinkedIn</a>
+    <!-- PROJECT INSIGHTS -->
+    <section id="insights">
+      <div class="container reveal">
+        <div class="reveal" style="text-align:center;">
+          <div class="section-label" style="justify-content:center;">Case Studies</div>
+          <h2 class="section-title">PROJECT INSIGHTS</h2>
+          <p class="section-sub" style="margin:0 auto 48px;">Instead of generic reviews, we believe in transparently showing the challenge, solution and engineering outcome of our builds.</p>
+        </div>
+        <div class="insights-grid" id="insightsGrid"></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ==================== FOOTER ==================== -->
+    <!-- DEMO FEEDBACK -->
+    <section id="feedback">
+      <div class="container">
+        <div class="reveal" style="text-align:center;">
+          <div class="section-label" style="justify-content:center;">Demo Feedback</div>
+          <h2 class="section-title">HOW BUSINESSES COULD USE NEXORA</h2>
+          <p class="section-sub" style="margin:0 auto 16px;">Illustrative feedback based on potential business use cases.</p>
+          <p style="font-size:0.7rem;color:rgba(255,255,255,0.25);margin:0 auto 48px;letter-spacing:0.03em;max-width:500px;">These are hypothetical scenarios &mdash; not verified customer testimonials.</p>
+        </div>
+        <div class="feedback-grid" id="feedbackGrid"></div>
+      </div>
+    </section>
+
+    <!-- BUSINESS IMPACT -->
+    <section id="impact">
+      <div class="container">
+        <div class="reveal" style="text-align:center;">
+          <div class="section-label" style="justify-content:center;">Outcomes</div>
+          <h2 class="section-title">WE DON'T JUST BUILD SOFTWARE. WE BUILD OUTCOMES.</h2>
+          <p class="section-sub" style="margin:0 auto 56px;">See the direct transformation from operational friction to optimized performance.</p>
+        </div>
+        
+        <div class="impact-grid" id="impactGrid"></div>
+        
+        <div class="impact-quote reveal">
+          <p>"The goal isn't more technology. The goal is less friction between your business and the customer."</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process">
+      <div class="container">
+        <div class="reveal" style="text-align:center;">
+          <div class="section-label" style="justify-content:center;">Methodology</div>
+          <h2 class="section-title">FROM BUSINESS PROBLEM TO WORKING SYSTEM.</h2>
+          <p class="section-sub" style="margin:0 auto;">A rigorous, structured path that keeps project delivery transparent and results-oriented.</p>
+        </div>
+        <div class="process-timeline reveal" id="processTimeline"></div>
+      </div>
+    </section>
+
+    <!-- WHY NEXORA -->
+    <section id="whyus">
+      <div class="container">
+        <div class="reveal">
+          <div class="section-label">Alignment</div>
+          <h2 class="section-title">WHY WORK WITH NEXORA?</h2>
+        </div>
+        <div class="whyus-grid" id="whyusGrid"></div>
+      </div>
+    </section>
+
+    <!-- FOUNDER -->
+    <section id="founder">
+      <div class="container">
+        <div class="reveal" style="text-align:center;">
+          <div class="section-label" style="justify-content:center;">Studio Leadership</div>
+          <h2 class="section-title">FOUNDER-LED DELIVERY</h2>
+        </div>
+        <div class="founder-card reveal">
+          <div class="founder-info-side">
+            <div class="founder-tagline">Utkarsh Srivastava</div>
+            <h3 class="founder-name">Founder &amp; Lead Developer</h3>
+            <div class="founder-role">Nexora Labs</div>
+            <p class="founder-bio">
+              Nexora Labs is a founder-led digital studio focused on building modern websites, AI applications and automation systems for businesses.
+            </p>
+            <p class="founder-bio">
+              We work directly with you to diagnose bottlenecks, design high-converting frontends, and implement back-office scripts that streamline your team's day.
+            </p>
+            
+            <div class="founder-principles-wrap">
+              <h4>Core Principles</h4>
+              <ul>
+                <li><i class="ti ti-circle-check-filled" aria-hidden="true"></i>Direct communication</li>
+                <li><i class="ti ti-circle-check-filled" aria-hidden="true"></i>AI-first development</li>
+                <li><i class="ti ti-circle-check-filled" aria-hidden="true"></i>No unnecessary outsourcing</li>
+                <li><i class="ti ti-circle-check-filled" aria-hidden="true"></i>Transparent delivery</li>
+                <li><i class="ti ti-circle-check-filled" aria-hidden="true"></i>Continuous learning</li>
+              </ul>
+            </div>
+
+            <div class="founder-socials">
+              <a href="#" class="btn-social-icon" id="founderLinkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></a>
+              <a href="#" class="btn-social-icon" id="founderGithub" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="ti ti-brand-github" aria-hidden="true"></i></a>
+              <a href="#" class="btn-social-icon" id="founderEmail" aria-label="Send email"><i class="ti ti-mail" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <div class="founder-features-side">
+            <div class="founder-timeline" id="founderTimeline"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTIMATOR -->
+    <section id="estimate">
+      <div class="container">
+        <div class="reveal" style="text-align:center;">
+          <div class="section-label" style="justify-content:center;">Instant estimate</div>
+          <h2 class="section-title">GET A PROJECT PROPOSAL</h2>
+          <p class="section-sub" style="margin:0 auto;">Tell us what you need. Get a customized proposal outline in seconds.</p>
+        </div>
+        <div class="estimator reveal">
+          <div class="est-progress" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="3" aria-label="Form progress">
+            <div class="est-step-indicator active" data-step="1">1</div>
+            <div class="est-progress-line"><div class="fill" style="width:0%"></div></div>
+            <div class="est-step-indicator" data-step="2">2</div>
+            <div class="est-progress-line"><div class="fill" style="width:0%"></div></div>
+            <div class="est-step-indicator" data-step="3">3</div>
+          </div>
+
+          <div class="est-step active" data-step="1">
+            <h3>About your business</h3>
+            <p>Help us understand what you do.</p>
+            <div class="field">
+              <label for="bizType">Business type</label>
+              <select id="bizType" autocomplete="organization-type">
+                <option value="">Select...</option>
+                <option>Restaurant</option>
+                <option>Salon &amp; Spa</option>
+                <option>Clinic</option>
+                <option>Coaching</option>
+                <option>Real Estate</option>
+                <option>E-commerce</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="bizLocation">Your location</label>
+              <input type="text" id="bizLocation" placeholder="e.g. Mumbai, India or London, UK" autocomplete="address-level2" />
+            </div>
+            <div class="field">
+              <fieldset>
+                <legend>What's the goal?</legend>
+                <div class="radio-group" id="bizGoal">
+                  <label><input type="radio" name="goal" value="Get more calls" /><span>Get more calls</span></label>
+                  <label><input type="radio" name="goal" value="Sell online" /><span>Sell online</span></label>
+                  <label><input type="radio" name="goal" value="Look professional" /><span>Look professional</span></label>
+                  <label><input type="radio" name="goal" value="All of the above" /><span>All of the above</span></label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="est-nav">
+              <div></div>
+              <button class="btn btn-primary" onclick="estNext(2)" data-track="estimator_started">Next <i class="ti ti-arrow-right" aria-hidden="true"></i></button>
+            </div>
+          </div>
+
+          <div class="est-step" data-step="2">
+            <h3>What you need</h3>
+            <p>Customize your website package.</p>
+            <div class="field">
+              <label for="pageCount">Number of pages</label>
+              <div class="slider-wrap">
+                <input type="range" id="pageCount" min="1" max="10" value="3" oninput="document.getElementById('pageVal').textContent=this.value" />
+                <div class="slider-val" id="pageVal" aria-live="polite">3</div>
+              </div>
+            </div>
+            <div class="field">
+              <fieldset>
+                <legend>Features (select all that apply)</legend>
+                <div class="features-grid" id="featuresGrid">
+                  <div class="feat-card" data-feat="Contact form" role="checkbox" aria-checked="false" tabindex="0"><i class="ti ti-mail" aria-hidden="true"></i>Contact form</div>
+                  <div class="feat-card" data-feat="WhatsApp button" role="checkbox" aria-checked="false" tabindex="0"><i class="ti ti-brand-whatsapp" aria-hidden="true"></i>WhatsApp</div>
+                  <div class="feat-card" data-feat="Photo gallery" role="checkbox" aria-checked="false" tabindex="0"><i class="ti ti-photo" aria-hidden="true"></i>Gallery</div>
+                  <div class="feat-card" data-feat="Blog" role="checkbox" aria-checked="false" tabindex="0"><i class="ti ti-pencil" aria-hidden="true"></i>Blog</div>
+                  <div class="feat-card" data-feat="Booking system" role="checkbox" aria-checked="false" tabindex="0"><i class="ti ti-calendar" aria-hidden="true"></i>Booking</div>
+                  <div class="feat-card" data-feat="Payment gateway" role="checkbox" aria-checked="false" tabindex="0"><i class="ti ti-credit-card" aria-hidden="true"></i>Payment</div>
+                  <div class="feat-card" data-feat="Google Maps" role="checkbox" aria-checked="false" tabindex="0"><i class="ti ti-map-pin" aria-hidden="true"></i>Maps</div>
+                  <div class="feat-card" data-feat="SEO setup" role="checkbox" aria-checked="false" tabindex="0"><i class="ti ti-search" aria-hidden="true"></i>SEO</div>
+                  <div class="feat-card" data-feat="Social media links" role="checkbox" aria-checked="false" tabindex="0"><i class="ti ti-share" aria-hidden="true"></i>Social</div>
+                  <div class="feat-card" data-feat="Live chat" role="checkbox" aria-checked="false" tabindex="0"><i class="ti ti-message-circle" aria-hidden="true"></i>Live chat</div>
+                </div>
+              </fieldset>
+            </div>
+            <div class="field">
+              <fieldset>
+                <legend>Timeline</legend>
+                <div class="radio-group" id="timeline">
+                  <label><input type="radio" name="timeline" value="ASAP" /><span>ASAP (3&ndash;4 days)</span></label>
+                  <label><input type="radio" name="timeline" value="Normal" /><span>Normal (1 week)</span></label>
+                  <label><input type="radio" name="timeline" value="Flexible" /><span>Flexible (2+ weeks)</span></label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="est-nav">
+              <button class="btn btn-secondary" onclick="estNext(1)"><i class="ti ti-arrow-left" aria-hidden="true"></i> Back</button>
+              <button class="btn btn-primary" onclick="estNext(3)">Next <i class="ti ti-arrow-right" aria-hidden="true"></i></button>
+            </div>
+          </div>
+
+          <div class="est-step" data-step="3">
+            <h3>Your details</h3>
+            <p>So we can send your proposal and follow up.</p>
+            <div class="field">
+              <label for="estName">Full name *</label>
+              <input type="text" id="estName" placeholder="Your name" autocomplete="name" required />
+              <div class="field-error" id="err-estName" role="alert" aria-live="polite" hidden></div>
+            </div>
+            <div class="field">
+              <label for="estWhatsapp">WhatsApp number *</label>
+              <input type="tel" id="estWhatsapp" placeholder="+91 98765 43210" autocomplete="tel" required />
+              <div class="field-error" id="err-estWhatsapp" role="alert" aria-live="polite" hidden></div>
+            </div>
+            <div class="field">
+              <label for="estEmail">Email address *</label>
+              <input type="email" id="estEmail" placeholder="you@example.com" autocomplete="email" required />
+              <div class="field-error" id="err-estEmail" role="alert" aria-live="polite" hidden></div>
+            </div>
+            <div class="field">
+              <label for="estNotes">Any extra notes (optional)</label>
+              <textarea id="estNotes" placeholder="Anything else we should know..."></textarea>
+            </div>
+            <div class="est-nav">
+              <button class="btn btn-secondary" onclick="estNext(2)"><i class="ti ti-arrow-left" aria-hidden="true"></i> Back</button>
+              <button class="btn btn-primary" id="estSubmitBtn" data-track="lead_submitted">Get Customized Proposal <i class="ti ti-arrow-right" aria-hidden="true"></i></button>
+            </div>
+          </div>
+
+          <div class="est-loading" id="estLoading" aria-live="polite" aria-busy="true">
+            <div class="est-spinner" aria-hidden="true"></div>
+            <p>Our AI is preparing your customized proposal...</p>
+          </div>
+
+          <div class="est-failure" id="estFailure" role="alert" aria-live="assertive" hidden>
+            <div class="est-failure-inner">
+              <div class="est-failure-title">Something went wrong</div>
+              <div class="est-failure-message" id="estFailureMsg"></div>
+              <div class="est-failure-actions">
+                <button class="btn btn-secondary" type="button" id="estRetryBtn">Try again</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="est-result" id="estResult">
+            <div class="est-price" id="resPrice"></div>
+            <div class="est-delivery" id="resDelivery"></div>
+            <ul class="est-included" id="resIncluded"></ul>
+            <div class="est-upsell" id="resUpsell"></div>
+            <div class="est-disclaimer" id="resDisclaimer"></div>
+            <div class="est-result-ctas">
+              <a href="#" class="btn btn-primary" id="resWhatsapp" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click">Schedule Strategy Call <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+              <button class="btn btn-secondary" id="resEmail">Email Me This Blueprint</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH STACK -->
+    <section id="techstack">
+      <div class="container">
+        <div class="reveal" style="text-align:center;">
+          <div class="section-label" style="justify-content:center;">Tech stack</div>
+          <h2 class="section-title">TECHNOLOGIES WE BUILD WITH</h2>
+        </div>
+        <div class="techstack-grid" id="techstackGrid"></div>
+      </div>
+    </section>
+
+    <!-- FREE BUSINESS AUDIT -->
+    <section id="audit">
+      <div class="container reveal">
+        <div class="reveal" style="text-align:center;">
+          <div class="section-label" style="justify-content:center;">Direct Audit</div>
+          <h2 class="section-title">SEE WHAT'S HOLDING YOUR DIGITAL PRESENCE BACK.</h2>
+          <p class="section-sub" style="margin:0 auto 48px;">Get a comprehensive manual assessment of your website design, conversion funnel, speed and automation opportunities.</p>
+        </div>
+        
+        <div class="audit-card-wrapper">
+          <form id="auditForm" class="audit-form" novalidate>
+            <div class="form-grid-2">
+              <div class="field">
+                <label for="auditName">Your Name *</label>
+                <input type="text" id="auditName" required placeholder="Name" autocomplete="name" />
+              </div>
+              <div class="field">
+                <label for="auditBizName">Business Name *</label>
+                <input type="text" id="auditBizName" required placeholder="Company" autocomplete="organization" />
+              </div>
+            </div>
+            <div class="form-grid-2">
+              <div class="field">
+                <label for="auditUrl">Website URL (optional)</label>
+                <input type="url" id="auditUrl" placeholder="https://yourbusiness.com" autocomplete="url" />
+              </div>
+              <div class="field">
+                <label for="auditIndustry">Industry *</label>
+                <input type="text" id="auditIndustry" required placeholder="e.g. Clinic, Architect" />
+              </div>
+            </div>
+            <div class="form-grid-2">
+              <div class="field">
+                <label for="auditEmail">Email Address *</label>
+                <input type="email" id="auditEmail" required placeholder="you@example.com" autocomplete="email" />
+              </div>
+              <div class="field">
+                <label for="auditWhatsapp">WhatsApp Number *</label>
+                <input type="tel" id="auditWhatsapp" required placeholder="+1 234 567 8900" autocomplete="tel" />
+              </div>
+            </div>
+            <div class="form-submit-wrap">
+              <button type="submit" class="btn btn-primary" data-track="audit_form_submitted">Get My Free Audit <i class="ti ti-arrow-right" aria-hidden="true"></i></button>
+            </div>
+          </form>
+          <div id="auditSuccess" hidden>
+            <i class="ti ti-checkbox" aria-hidden="true"></i>
+            <h3>Audit Request Received</h3>
+            <p>Your audit request has been received. We'll review your business presence and get back to you with actionable insights within 24 hours.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container reveal">
+        <div class="section-label" style="justify-content:center;">Let's talk</div>
+        <h2 class="section-title">HAVE A BUSINESS PROBLEM WORTH SOLVING?</h2>
+        <p class="section-sub" style="margin:0 auto 48px;">Tell us what you're trying to improve. We'll help you figure out whether Nexora is the right fit.</p>
+        
+        <div class="contact-card-wrapper">
+          <form id="customContactForm" class="contact-form" novalidate>
+            <div class="form-grid-2">
+              <div class="field">
+                <label for="cName">Your Name *</label>
+                <input type="text" id="cName" required placeholder="Name" autocomplete="name" />
+              </div>
+              <div class="field">
+                <label for="cBusiness">Business Name</label>
+                <input type="text" id="cBusiness" placeholder="Your business name" autocomplete="organization" />
+              </div>
+            </div>
+            <div class="form-grid-2">
+              <div class="field">
+                <label for="cEmail">Email Address *</label>
+                <input type="email" id="cEmail" required placeholder="you@example.com" autocomplete="email" />
+              </div>
+              <div class="field">
+                <label for="cWhatsapp">WhatsApp Number *</label>
+                <input type="tel" id="cWhatsapp" required placeholder="+1 234 567 8900" autocomplete="tel" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="cImprove">What are you trying to improve? *</label>
+              <textarea id="cImprove" required placeholder="Tell us about the bottlenecks, features, or systems you want automated..."></textarea>
+            </div>
+            <div class="form-grid-2">
+              <div class="field">
+                <label for="cBudget">Budget Range</label>
+                <select id="cBudget">
+                  <option value="Flexible">Select range...</option>
+                  <option value="Under $1k">Under $1,000</option>
+                  <option value="$1k - $3k">$1,000 - $3,000</option>
+                  <option value="$3k - $5k">$3,000 - $5,000</option>
+                  <option value="$5k+">$5,000+</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="cTimeline">Timeline</label>
+                <select id="cTimeline">
+                  <option value="Flexible">Select timeline...</option>
+                  <option value="ASAP (3-5 Days)">ASAP (3-5 Days)</option>
+                  <option value="1-2 Weeks">1-2 Weeks</option>
+                  <option value="3-4 Weeks">3-4 Weeks</option>
+                  <option value="Flexible">Flexible</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-submit-wrap">
+              <button type="submit" class="btn btn-primary" data-track="contact_form_submitted">Start A Conversation <i class="ti ti-arrow-right" aria-hidden="true"></i></button>
+            </div>
+          </form>
+          <div id="contactSuccess" hidden>
+            <i class="ti ti-message" aria-hidden="true"></i>
+            <h3>Conversation Initiated</h3>
+            <p>Thank you! Your details have been received. We'll review your business bottlenecks and connect with you shortly.</p>
+          </div>
+        </div>
+
+        <div class="contact-btns">
+          <a href="#" class="btn btn-outline" id="emailLink"><i class="ti ti-mail" aria-hidden="true"></i> Email Us</a>
+          <a href="#" class="btn btn-outline" id="waContact" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click"><i class="ti ti-brand-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+          <a href="#" class="btn btn-outline" id="liContact" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-linkedin" aria-hidden="true"></i> LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
-      <div class="footer-logo">nexoralabs</div>
+      <div class="footer-logo"><img src="nexoralogo.png" alt="Nexora Labs" class="footer-logo-img" />nexoralabs</div>
       <div>Made with precision + AI &middot; Bengaluru, India</div>
-      <div>AI Product Studio &middot; Websites, SaaS &amp; AI Solutions</div>
+      <div>AI-powered Digital Solutions Studio &middot; Websites, SaaS &amp; Automation</div>
     </div>
   </footer>
 
-  <!-- ==================== WHATSAPP BUTTON ==================== -->
-  <a href="#" id="waBtn" target="_blank" data-track="whatsapp_click" aria-label="Chat on WhatsApp">
-    <i class="ti ti-brand-whatsapp"></i>
+  <!-- WHATSAPP BUTTON -->
+  <a href="#" id="waBtn" target="_blank" rel="noopener noreferrer" data-track="whatsapp_click" aria-label="Chat on WhatsApp">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>
   </a>
 
-  <!-- ==================== SCRIPTS ==================== -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script type="importmap">
-  {
-    "imports": {
-      "three": "https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.module.js"
-    }
-  }
-  </script>
-  <script src="js/portfolio.js?v=5"></script>
-  <script src="js/estimator.js?v=5"></script>
-  <script src="js/main.js?v=5"></script>
-  <script src="js/animations.js?v=5"></script>
-  <script type="module" src="js/three-scene.js?v=5"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha256-KAM+RJox68w5blvosTtjFSvwMJQoj7WGcDQyGSe84Ic=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha256-rTPC35raimY8IUc1eCj5gNC3ynMe8z6zxuTzJ8OyzaU=" crossorigin="anonymous"></script>
+  <script src="js/portfolio.js?v=7"></script>
+  <script src="js/estimator.js?v=7"></script>
+  <script src="js/main.js?v=7"></script>
+  <script src="js/animations.js?v=7"></script>
 </body>
 </html>

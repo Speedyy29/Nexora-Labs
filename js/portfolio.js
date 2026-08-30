@@ -3,13 +3,13 @@ var PortfolioRenderer = (function() {
     var scene = document.getElementById('portfolioScene');
     if (!scene) return;
 
-    projects.forEach(function(p, idx) {
+    projects.forEach(function(p) {
       var card = document.createElement('div');
       card.className = 'portfolio-card reveal' + (p.featured ? ' featured' : '');
 
       var badgesHtml = '<div class="portfolio-badges">';
-      if (p.featured) badgesHtml += '<span class="portfolio-badge featured-badge"><i class="ti ti-star-filled"></i> Featured</span>';
-      badgesHtml += '<span class="portfolio-badge live-badge"><i class="ti ti-circle-filled" style="font-size:0.5rem;animation:pulse 2s infinite;"></i> Live Project</span>';
+      if (p.featured) badgesHtml += '<span class="portfolio-badge featured-badge"><i class="ti ti-star-filled" aria-hidden="true"></i> Featured</span>';
+      badgesHtml += '<span class="portfolio-badge live-badge"><i class="ti ti-circle-filled" aria-hidden="true" style="font-size:0.5rem;"></i> Live Project</span>';
       badgesHtml += '<span class="portfolio-badge category-badge">' + p.category + '</span>';
       badgesHtml += '</div>';
 
@@ -21,17 +21,17 @@ var PortfolioRenderer = (function() {
       }
 
       var actionsHtml = '<div class="portfolio-actions">';
-      actionsHtml += '<a href="' + p.url + '" target="_blank" rel="noopener noreferrer" class="portfolio-link">Explore Project <i class="ti ti-arrow-right"></i></a>';
+      actionsHtml += '<a href="' + p.url + '" target="_blank" rel="noopener noreferrer" class="portfolio-link">View Live <i class="ti ti-arrow-right" aria-hidden="true"></i></a>';
       if (p.github) {
-        actionsHtml += '<a href="' + p.github + '" target="_blank" rel="noopener noreferrer" class="github-link"><i class="ti ti-brand-github"></i> Source</a>';
+        actionsHtml += '<a href="' + p.github + '" target="_blank" rel="noopener noreferrer" class="github-link"><i class="ti ti-brand-github" aria-hidden="true"></i> Source</a>';
       }
       actionsHtml += '</div>';
 
       var imgHtml;
       if (p.screenshot) {
-        imgHtml = '<img src="' + p.screenshot + '" alt="' + p.title + ' screenshot" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />';
+        imgHtml = '<img src="' + p.screenshot + '" alt="' + p.title + ' screenshot" width="800" height="450" loading="lazy" />';
       } else {
-        imgHtml = '<div style="width:100%;height:100%;background:linear-gradient(135deg,#1a0533,#0d1b2a);display:flex;align-items:center;justify-content:center;"><i class="ti ti-rocket" style="font-size:2rem;color:var(--primary);opacity:.4;"></i></div>';
+        imgHtml = '<div style="width:100%;height:100%;background:var(--surface-soft);display:flex;align-items:center;justify-content:center;"><i class="ti ti-rocket" aria-hidden="true" style="font-size:2rem;color:var(--muted);opacity:.4;"></i></div>';
       }
 
       card.innerHTML =
@@ -54,16 +54,6 @@ var PortfolioRenderer = (function() {
           '</div>' +
         '</div>';
       scene.appendChild(card);
-
-      card.addEventListener('mousemove', function(e) {
-        var rect = card.getBoundingClientRect();
-        var x = (e.clientX - rect.left) / rect.width - 0.5;
-        var y = (e.clientY - rect.top) / rect.height - 0.5;
-        card.style.transform = 'perspective(800px) rotateY(' + (x * 6) + 'deg) rotateX(' + (-y * 6) + 'deg) translateY(-8px) scale(1.01)';
-      });
-      card.addEventListener('mouseleave', function() {
-        card.style.transform = '';
-      });
 
       var hoverTimer;
       card.addEventListener('mouseenter', function() {
